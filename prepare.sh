@@ -14,7 +14,7 @@ done
 # Wait for the preprocessing to finish
 while [ $(jobs -r | wc -l) -gt 0 ]
 do
-	sleep 1
+	continue
 done
 
 # Generate representations

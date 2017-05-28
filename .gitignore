@@ -212,5 +212,6 @@ ENV/
 *.jpg
 *.csv
 *.pkl
-*.log
 *.mp4
+.idea/*
+

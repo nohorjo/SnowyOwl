@@ -10,3 +10,15 @@ Uses [OpenFace](https://cmusatyalab.github.io/openface/) face recognition.
 - pandas
 - SciPy
 - scikit-learn
+
+## Usage
+
+To use images in _raw_ directory to create the classification model:
+```
+./prepare.sh
+```
+To search videos in _vid_ directory:
+```
+./search.sh
+```
+
