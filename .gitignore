@@ -213,3 +213,4 @@ ENV/
 *.csv
 *.pkl
 *.log
+*.mp4

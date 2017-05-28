@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
-echo "" > out.log
+echo "" > result.log
 
-tail -f out.log &
+tail -f result.log &
 
 for f in $(find compare -type f | grep -ve '.md$')
 do
-    ./classifier.py infer feature/classifier.pkl ${f} >> out.log
+    ./classifier.py infer feature/classifier.pkl ${f} >> result.log
 done
