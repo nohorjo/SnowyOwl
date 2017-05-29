@@ -215,3 +215,4 @@ ENV/
 *.mp4
 .idea/*
 align/*
+.fuse_hidden*
