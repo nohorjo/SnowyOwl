@@ -2,12 +2,18 @@
 
 import sys
 import cv2
+import os
 
 try:
     filename = sys.argv[1]
+    frameDir = "compare/%s"% filename[filename.rfind("/")+1:]
+    os.makedirs(frameDir)
 except IndexError:
     print "Error: provide file"
     exit(1)
+except OSError:
+    pass
+
 # load the video
 vidcap = cv2.VideoCapture(filename)
 # get the framerate
@@ -23,7 +29,7 @@ while True:
         success, image = vidcap.retrieve()
         if success:
             # save frame as JPEG file
-            cv2.imwrite("compare/%s_%d.jpg" % (filename[filename.rfind("/")+1:], count), image)
+            cv2.imwrite("%s/%d.jpg" % (frameDir, count), image)
             count += 1
         else:
             break
